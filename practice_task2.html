@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+
+    <style>
+        
+
+        fieldset{
+            font-size: 25px;
+            padding: 15px;
+            margin: auto;
+            width: 550px;
+
+        }
+
+        label::after{
+            content: " *" !important;
+            color: red;
+        }
+        form{
+            width: 500px;
+            padding: 25px;
+        }
+        button{
+            width: 90px;
+            height: 40px;
+            display: block;
+            margin: auto;
+           
+        }
+        input{
+            width: 100%;
+            padding: 10px;
+            margin-top: 9px;
+        }
+        button:hover{
+            background-color: #000000;
+            color: aliceblue;
+            cursor: pointer;
+        }
+
+        #gender{
+            display: flex;
+            flex-direction: row;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<fieldset>
+
+<legend>User personal information</legend> <br>
+
+<form>
+
+<label for="name">Enter your full name</label><br>
+<input id="name" type="text" placeholder="Name">
+
+<br><br>
+
+<label for="email">Enter your email</label><br>
+<input id="email" type="email" placeholder="Email">
+
+<br><br>
+
+<label for="password">Enter your password</label><br>
+<input id="password" type="password">
+
+<br><br>
+
+<label for="confirm">Confirm password</label><br>
+<input id="confirm" type="password">
+
+<br><br>
+
+<label >Enter your gender</label><br>
+
+<div id="gender">
+<input type="radio" name="gender" value="male"> Male
+<input type="radio" name="gender" value="female"> Female
+<input type="radio" name="gender" value="others"> Others
+</div>
+
+<br><br>
+
+<label for="dob">Enter your date of birth</label><br>
+<input id="dob" type="date">
+
+<br><br>
+
+<label for="address">Enter your Address</label><br>
+<textarea id="address"
+placeholder="Enter your address"
+rows="8" cols="60" >
+</textarea>
+
+<br><br>
+
+<button>Submit</button>
+
+</form>
+
+</fieldset>
+
+</body>
+</html>
