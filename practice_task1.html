@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Feedback Form</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 30px;
+        }
+
+        h1{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h3::after{
+            content: " *";
+            color: red;
+        }
+
+        fieldset{
+            width: 1000px;
+            margin: auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            border: 2px solid #cfcfcf;
+        }
+
+        input[type="text"],
+        input[type="email"]{
+            width: 300px;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid grey;
+        }
+
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+
+        th, td{
+            padding: 15px;
+            text-align: center;
+        }
+
+        th{
+            background-color: #d9d9d9;
+        }
+
+        tr:nth-child(even){
+            background-color: #f5f5f5;
+        }
+
+        button{
+            background-color: rgb(200, 193, 193);
+            border-radius: 8px;
+            border: none;
+            padding: 12px 25px;
+            display: block;
+            margin: auto;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover{
+            background-color: black;
+            color: white;
+        }
+
+        .stars{
+            font-size: 25px;
+            color: gold;
+            margin-top: 10px;
+        }
+
+        p{
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Customer Feedback Form</h1>
+
+    <form>
+
+        <fieldset>
+
+            <h3>Name</h3>
+
+            <input
+            type="text"
+            name="fname"
+            required
+            minlength="3"
+            maxlength="8"
+            placeholder="Enter your name">
+
+            <input
+            type="text"
+            name="lname"
+            required
+            minlength="3"
+            maxlength="10"
+            placeholder="Enter your surname">
+
+            <br><br>
+
+            <h3>Email</h3>
+
+            <input
+            type="email"
+            name="email"
+            required
+            placeholder="admin@gmail.com">
+
+            <br><br>
+
+            <h3>Your Experience</h3>
+
+            <div class="stars">
+                ⭐ ⭐ ⭐ ⭐ ⭐
+            </div>
+
+            <p>
+                Overall, how would you rate your experience with us?
+            </p>
+
+            <h3>How satisfied are you with</h3>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th></th>
+                        <th>Very Unsatisfied</th>
+                        <th>Unsatisfied</th>
+                        <th>Neutral</th>
+                        <th>Satisfied</th>
+                        <th>Very Satisfied</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Purchase</td>
+
+                        <td><input type="radio" name="purchase"></td>
+                        <td><input type="radio" name="purchase"></td>
+                        <td><input type="radio" name="purchase"></td>
+                        <td><input type="radio" name="purchase"></td>
+                        <td><input type="radio" name="purchase"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Service</td>
+
+                        <td><input type="radio" name="service"></td>
+                        <td><input type="radio" name="service"></td>
+                        <td><input type="radio" name="service"></td>
+                        <td><input type="radio" name="service"></td>
+                        <td><input type="radio" name="service"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Company Overall</td>
+
+                        <td><input type="radio" name="company"></td>
+                        <td><input type="radio" name="company"></td>
+                        <td><input type="radio" name="company"></td>
+                        <td><input type="radio" name="company"></td>
+                        <td><input type="radio" name="company"></td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+            <br><br>
+
+            <h2>How likely are you to buy from us again?</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th></th>
+                        <th>Very Unlikely</th>
+                        <th>Unlikely</th>
+                        <th>Neutral</th>
+                        <th>Likely</th>
+                        <th>Very Likely</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Buy from us again</td>
+
+                        <td><input type="radio" name="buy_us"></td>
+                        <td><input type="radio" name="buy_us"></td>
+                        <td><input type="radio" name="buy_us"></td>
+                        <td><input type="radio" name="buy_us"></td>
+                        <td><input type="radio" name="buy_us"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Recommend our products to others</td>
+
+                        <td><input type="radio" name="recommend"></td>
+                        <td><input type="radio" name="recommend"></td>
+                        <td><input type="radio" name="recommend"></td>
+                        <td><input type="radio" name="recommend"></td>
+                        <td><input type="radio" name="recommend"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Recommend our company to others</td>
+
+                        <td><input type="radio" name="recommend_company"></td>
+                        <td><input type="radio" name="recommend_company"></td>
+                        <td><input type="radio" name="recommend_company"></td>
+                        <td><input type="radio" name="recommend_company"></td>
+                        <td><input type="radio" name="recommend_company"></td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+            <br><br>
+
+            <button type="submit">
+                Submit
+            </button>
+
+        </fieldset>
+
+    </form>
+
+</body>
+</html>
