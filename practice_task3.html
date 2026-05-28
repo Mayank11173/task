@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC Training Institute</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: Arial, sans-serif;
+            margin-top: 80px;
+        }
+
+
+        nav{
+            background-image:
+            linear-gradient(rgba(0,0,0,0.6),
+            rgba(0,0,0,0.6)),
+            url('https://as2.ftcdn.net/jpg/16/77/29/27/220_F_1677292739_2CsR8KrJMlLwhHNvngSa9lfxgBWd6xXY.jpg');
+            background-size: cover;
+            background-position: center;
+
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 25px 40px;
+
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        nav ul{
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li{
+            margin-left: 55px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        nav ul li:hover{
+            color: yellow;
+        }
+
+
+        #home{
+            background-image:
+            linear-gradient(rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)),
+            url('https://img.magnific.com/premium-photo/modern-office-building-with-lush-green-lawn-palm-trees_1034924-60216.jpg?semt=ais_hybrid&w=740&q=80');
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            color: white;
+            padding: 40px;
+            height: 100vh;
+        }
+        
+
+        #home h2{
+            font-size: 55px;
+            margin-bottom: 90px;
+            margin-top: 150px;
+        }
+
+        #home p{
+            font-size: 25px;
+        }
+
+        .home-video{
+            margin-top: 200px;
+            align-self: flex-end;
+            margin-bottom: 150px;
+        }
+
+        .home-video iframe{
+            border: 5px solid white;
+            border-radius: 10px;
+            width: 500px;
+            height: 300px;
+        }
+
+
+        #courses{
+            background-image:
+            linear-gradient(rgba(0,0,0,0.6),
+            rgba(0,0,0,0.6)),
+            url('https://static.vecteezy.com/system/resources/previews/034/039/712/non_2x/wooden-bookcase-with-books-on-shelves-near-a-blue-wall-on-a-wooden-floor-generated-by-artificial-intelligence-photo.jpg');
+
+            background-size: cover;
+            background-position: center;
+
+            height: 100vh;
+            padding: 50px;
+            color: white;
+        }
+
+        #courses h2{
+            text-align: center;
+            font-size: 45px;
+            margin-bottom: 60px;
+            margin-top: 100px;
+        }
+
+        #courses ul{
+            margin-left: 40px;
+            margin-bottom: 25px;
+            margin-top: 50px;
+        }
+
+        #courses li{
+            font-size: 24px;
+            margin: 5px 5px;
+        }
+
+        .course-image{
+            display: flex;
+            justify-content: flex-end;
+            margin-top: -100px;
+        
+
+        }
+
+        .course-image img{
+            width: 250px;
+            height: 180px;
+            object-fit: cover;
+            border: 4px solid white;
+            border-radius: 10px;
+        }
+
+
+        #schedule{
+            background-image:
+            linear-gradient(rgba(0,0,0,0.6),
+            rgba(0,0,0,0.6)),
+            url('https://images.pexels.com/photos/326333/pexels-photo-326333.jpeg');
+
+            background-size: cover;
+            background-position: center;
+
+            height: 100vh;
+            padding: 50px;
+        }
+
+        #schedule h2{
+            text-align: center;
+            font-size: 45px;
+            margin-bottom: 30px;
+            color: white;
+            margin-top: 150px;
+        }
+
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            background-color: rgba(255,255,255,0.9);
+        }
+
+        th, td{
+            border: 2px solid black;
+            padding: 15px;
+            text-align: center;
+        }
+
+        th{
+            background-color: #0d47a1;
+            color: white;
+        }
+
+        td{
+            font-size: 18px;
+        }
+
+        /* REGISTRATION SECTION */
+
+        #registration{
+            background-image:
+            linear-gradient(rgba(0,0,0,0.7),
+            rgba(0,0,0,0.7)),
+            url('https://img.magnific.com/free-photo/dark-blue-wall-empty-room-with-wooden-floor_53876-74607.jpg');
+
+            background-size: cover;
+            background-position: center;
+
+            height: 100vh;
+            padding: 50px;
+        }
+
+        #registration h2{
+            text-align: center;
+            font-size: 45px;
+            margin-bottom: 40px;
+            color: white;
+        }
+
+        form{
+            width: 600px;
+            margin: auto;
+
+            background-color: rgba(255,255,255,0.15);
+
+            padding: 30px;
+            border-radius: 12px;
+
+            backdrop-filter: blur(5px);
+        }
+
+        .form-group{
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group label{
+            width: 150px;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea{
+            width: 350px;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+        }
+
+        textarea{
+            resize: none;
+        }
+
+        .gender-box{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: white;
+            width: 250px;
+        }
+
+        button{
+            display: block;
+            margin: auto;
+
+            background-color: #870e0e;
+            color: white;
+
+            border: none;
+            padding: 14px 25px;
+
+            font-size: 18px;
+            border-radius: 5px;
+
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover{
+            background-color: #1565c0;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav>
+
+        <h2>ABC Training Institute</h2>
+
+        <ul>
+            <li><a href="#home">Home</a> </li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#registration">Register</a></li>
+        </ul>
+
+    </nav>
+
+
+
+    <section id="home">
+
+        <h2>Welcome to ABC Training Institute</h2>
+
+        <p>
+            Empowering Your Future with Quality Education
+        </p>
+
+        <div class="home-video">
+
+            <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/Ebe9NFgQnnU?si=Y4-XyyGVSr2JGq_Z"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+    </section>
+
+
+
+    <section id="courses">
+
+        <h2>Our Courses</h2>
+
+        <ul>
+            <li>
+                Web Development
+                <ul>
+                    <li>HTML & CSS</li>
+                    <li>JavaScript</li>
+                    <li>React JS</li>
+                </ul>
+            </li>
+        </ul>
+
+        <ul>
+            <li>
+                Programming Languages
+                <ul>
+                    <li>Python</li>
+                    <li>Java</li>
+                    <li>C++</li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="course-image">
+
+            <img
+            src="https://images.pexels.com/photos/35412745/pexels-photo-35412745.jpeg?cs=srgb&dl=pexels-buusecolak-35412745.jpg&fm=jpg"
+            alt="Courses Image">
+
+        </div>
+
+    </section>
+
+
+
+    <section id="schedule">
+
+        <h2>Course Schedule</h2>
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>Course</th>
+                    <th>Trainer</th>
+                    <th>Duration</th>
+                    <th>Mode</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>HTML & CSS</td>
+                    <td>Ashoka</td>
+                    <td>2 Weeks</td>
+                    <td>Online</td>
+                </tr>
+
+                <tr>
+                    <td>Java</td>
+                    <td>Rahul</td>
+                    <td>4 Weeks</td>
+                    <td>Offline</td>
+                </tr>
+
+                <tr>
+                    <td>React JS</td>
+                    <td>Anita</td>
+                    <td>3 Weeks</td>
+                    <td>Online</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+  
+
+    <section id="registration">
+
+        <h2>Student Registration</h2>
+
+        <form>
+
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter your name">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" placeholder="Enter phone number">
+            </div>
+
+            <div class="form-group">
+
+                <label for="course">Course</label>
+
+                <select id="course">
+                    <option>HTML & CSS</option>
+                    <option>Java</option>
+                    <option>React JS</option>
+                </select>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Gender</label>
+
+                <div class="gender-box">
+
+                    <input type="radio" id="male" name="gender">
+                    <label for="male">Male</label>
+
+                    <input type="radio" id="female" name="gender">
+                    <label for="female">Female</label>
+
+                </div>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="message">Message</label>
+
+                <textarea
+                    id="message"
+                    rows="5"
+                    placeholder="Enter your message">
+                </textarea>
+
+            </div>
+
+            <button type="submit">
+                Register Now
+            </button>
+
+        </form>
+
+    </section>
+
+</body>
+</html>
