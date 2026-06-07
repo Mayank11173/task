@@ -1,0 +1,26 @@
+body{
+    display: grid;
+    grid-template-columns: auto auto auto auto ;
+    background-image: linear-gradient(rgb(31, 15, 72),black,rgb(31, 15, 72),black);
+    
+}
+    
+div{
+    width: 250px;
+    height: 270px;
+    margin: 20px;
+    padding:20px;
+    border-radius: 30px;
+    background-image: linear-gradient( purple, violet, pink,rgb(201, 130, 203),pink,violet, purple);
+    transition: 2s;
+    text-align: center;
+    font-style: italic;
+}
+div:hover{
+   transform: scale(1.01,1.01);
+    background-image: linear-gradient( cyan, rgb(20, 81, 101), cyan);
+   cursor: pointer;
+   font-size: 18px;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   
+}
